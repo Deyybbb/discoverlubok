@@ -1,0 +1,4 @@
+Agency/partner logos for the landing page (PNG with transparent background, about 200px tall):
+province-bohol.png, dot.png, bohol-tourism.png, geopark.png
+Change names or add more in js/config.js > PARTNER_LOGOS.
+Use official logos only with permission from each office.

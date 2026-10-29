@@ -1,0 +1,2 @@
+Put loboc-logo.png here (official seal, square PNG or SVG).
+Put hero-loboc-river.jpg here (landing page background, wide photo about 1920px).

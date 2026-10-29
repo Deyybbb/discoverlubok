@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>DiscoverLubok · River town, Music Capital of Bohol</title>
+  <meta name="description" content="Official tourism portal of the Municipality of Loboc, Bohol: tourist spots, things to do, places to stay, news, officials and visitor information.">
+  <meta name="theme-color" content="#8CCB55">
+  <!-- Security: only allow scripts from this site (and the pinned map library); block plugins and form hijacking.
+       When live, also send these as real HTTP headers (see SECURITY.md, _headers, .htaccess). -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob: https:; media-src 'self' blob: https:; connect-src 'self' https://api.open-meteo.com https://*.supabase.co wss://*.supabase.co; frame-src https://www.youtube-nocookie.com https://maps.google.com https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="icon" href="assets/img/loboc-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,800;1,9..144,400&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20261025b">
+</head>
+<body>
+  <a class="skip" href="#app">Skip to content</a>
+
+  <!-- Public navigation (hidden on the dashboard) -->
+  <header class="nav" id="nav">
+    <nav aria-label="Main">
+      <div class="pill">
+        <a class="brand" href="#home" aria-label="DiscoverLubok, home">
+          <span class="logo" data-logo></span>
+          <span class="brand-t">Discover<b>Lubok</b></span>
+        </a>
+        <ul class="links" id="links"></ul>
+        <div class="nav-r">
+          <button class="news-btn" id="newsBtn" aria-label="News and announcements" aria-controls="newsDrawer" aria-expanded="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h13v14H6a2 2 0 0 1-2-2zM17 9h3v8a2 2 0 0 1-2 2M7 9h7M7 13h7M7 16h4"/></svg>
+            <span class="dotn" id="newsDot" hidden></span>
+          </button>
+          <div id="acct"></div>
+          <button class="burger" id="burger" aria-expanded="false" aria-controls="mlinks" aria-label="Menu">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          </button>
+        </div>
+      </div>
+      <ul class="mlinks" id="mlinks"></ul>
+    </nav>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <!-- News & announcements drawer -->
+  <aside class="drawer" id="newsDrawer" aria-label="News and announcements" aria-hidden="true">
+    <div class="drawer-in" id="newsBody"></div>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+
+  <!-- Loboc Hymn player -->
+  <div class="hymn" id="hymn">
+    <button class="hymn-b" id="hymnBtn" aria-pressed="false" aria-label="Play the Loboc Hymn">
+      <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span class="hymn-t">Loboc Hymn</span>
+    </button>
+    <span class="hymn-notes" aria-hidden="true"><i>♪</i><i>♫</i><i>♩</i><i>♬</i></span>
+    <audio id="hymnAudio" preload="none" loop></audio>
+  </div>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mt">
+    <div class="mb" id="mb"></div>
+  </div>
+  <button class="totop" id="totop" aria-label="Back to top">↑</button>
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Order matters: config → content → data layer → site → dashboard -->
+  <script src="js/config.js?v=20261025b"></script>
+  <script src="js/loboc-shapes.js?v=20261025b"></script>
+  <script src="js/content.js?v=20261025b"></script>
+  <script src="js/tours.js?v=20261025b"></script>
+  <script src="js/api.js?v=20261025b"></script>
+  <script src="js/app.js?v=20261025b"></script>
+  <script src="js/admin.js?v=20261025b"></script>
+</body>
+</html>
